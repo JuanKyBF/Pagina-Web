@@ -1,0 +1,584 @@
+:root{
+    --vermillion: rgb(217,56,30);
+    --lightvermillion: rgb(231, 78, 44);
+
+
+}
+
+
+@font-face {
+    font-family: 'Latin Modern';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url('./fonts/LM-regular.woff2') format('woff2'),
+      url('./fonts/LM-regular.woff') format('woff'),
+      url('./fonts/LM-regular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Latin Modern';
+    font-style: italic;
+    font-weight: normal;
+    font-display: swap;
+    src: url('./fonts/LM-italic.woff2') format('woff2'),
+      url('./fonts/LM-italic.woff') format('woff'),
+      url('./fonts/LM-italic.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Latin Modern';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url('./fonts/LM-bold.woff2') format('woff2'),
+      url('./fonts/LM-bold.woff') format('woff'),
+      url('./fonts/LM-bold.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Latin Modern';
+    font-style: italic;
+    font-weight: bold;
+    font-display: swap;
+    src: url('./fonts/LM-bold-italic.woff2') format('woff2'),
+      url('./fonts/LM-bold-italic.woff') format('woff'),
+      url('./fonts/LM-bold-italic.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Libertinus';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url('./fonts/Libertinus-regular.woff2') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'Libertinus';
+    font-style: italic;
+    font-weight: normal;
+    font-display: swap;
+    src: url('./fonts/Libertinus-italic.woff2') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'Libertinus';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url('./fonts/Libertinus-bold.woff2') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'Libertinus';
+    font-style: italic;
+    font-weight: bold;
+    font-display: swap;
+    src: url('./fonts/Libertinus-bold-italic.woff2') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'Libertinus';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('./fonts/Libertinus-semibold.woff2') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'Libertinus';
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: url('./fonts/Libertinus-semibold-italic.woff2') format('woff2');
+  }
+
+  
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --body-color: hsl(0, 5%, 10%);
+  --body-bg-color: hsl(210, 20%, 98%);
+  --link-visited: hsl(0, 100%, 33%);
+  --link-focus-outline: hsl(220, 90%, 52%);
+  --pre-bg-color: hsl(210, 28%, 93%);
+  --kbd-bg-color: hsl(210, 5%, 100%);
+  --kbd-border-color: hsl(210, 5%, 70%);
+  --table-border-color: black;
+  --sidenote-target-border-color: hsl(55, 55%, 70%);
+  --footnotes-border-color: hsl(0, 0%, 39%);
+}
+
+.latex-dark {
+  --body-color: hsl(0, 0%, 86%);
+  --body-bg-color: hsl(0, 0%, 16%);
+  --link-visited: hsl(196 80% 77%);
+  --link-focus-outline: hsl(215, 63%, 73%);
+  --pre-bg-color: hsl(0, 1%, 25%);
+  --kbd-bg-color: hsl(0, 0%, 16%);
+  --kbd-border-color: hsl(210, 5%, 70%);
+  --table-border-color: white;
+  --sidenote-target-border-color: hsl(0, 0%, 59%);
+  --footnotes-border-color: hsl(0, 0%, 59%);
+  --proof-symbol-filter: invert(80%);
+}
+
+@media (prefers-color-scheme: dark) {
+   .latex-dark-auto {
+	--body-color: hsl(0, 0%, 86%);
+	--body-bg-color: hsl(0, 0%, 16%);
+	--link-visited: hsl(196 80% 77%);
+	--link-focus-outline: hsl(215, 63%, 73%);
+	--pre-bg-color: hsl(0, 1%, 25%);
+	--kbd-bg-color: hsl(0, 0%, 16%);
+	--kbd-border-color: hsl(210, 5%, 70%);
+	--table-border-color: white;
+	--sidenote-target-border-color: hsl(0, 0%, 59%);
+	--footnotes-border-color: hsl(0, 0%, 59%);
+	--proof-symbol-filter: invert(80%);
+  }
+}
+
+a:link {
+	color: var(--vermillion);
+}
+
+
+a:visited {
+	color: var(--vermillion);
+}
+
+*
+{
+border: 0;
+margin: 0;
+}
+
+body
+{
+	color: black;
+	background: whitesmoke;
+}
+
+#main
+{
+margin: 0 auto;
+width: 1400px;
+background: whitesmoke;
+}
+
+#header
+{
+width: 790px;
+margin: 0 auto;
+height: 240px;
+background: whitesmoke;
+
+}
+
+#logo
+{
+padding-left: 40px;
+text-align: left;
+padding-top: 120px;
+
+}
+
+#logo a {
+	text-decoration: none;
+	text-transform: lowercase;
+	font-style: italic;
+	font-size: 16px;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+
+#logo H2 a
+{
+font-size: 10px;
+}
+
+#buttons
+{
+padding-top: 13px;
+height: 49px;
+width: 790px;
+}
+
+#buttons li {
+	display: inline;
+}
+
+#buttons a {
+	display: block;
+	float: left;
+	width: 135px;
+	height: 36px;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 14px;
+	padding-top: 13px;
+	margin-right: 12px;
+
+}
+
+#buttons a:hover {
+	width: 135px;
+    height: 36px;
+}
+
+#content
+{
+border: 1px solid black;
+width: 1000px;
+margin: 0 auto;
+padding: 20px;
+}
+
+#left
+{
+width: 480px;
+padding: 0px;
+}
+
+#left H1
+{
+color: var(--lightvermillion);
+margin: 0;
+padding: 0;
+font-size: 24px;
+}
+#left H2
+{
+color: var(--lightvermillion);
+margin: 0;
+padding: 0;
+font-size: 18px;
+padding-top: 10px;
+}
+
+#left a
+{
+ color: var(--vermillion);
+}
+
+
+
+#left a:visited {
+	color: var(--vermillion);
+}
+
+#right
+{
+float: right;
+width: 254px;
+}
+
+#sidebar 
+{
+width: 254px;
+}
+
+#sidebar ul 
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#sidebar li 
+{
+	margin-bottom: 15px;
+}
+
+#sidebar li ul {
+	padding: 10px;
+	border-top: none;
+}
+
+#sidebar li li {
+	margin: 0;
+	padding: 3px 0;
+}
+
+
+#sidebar li h2 {
+	height: 36px;
+	margin: 0;
+	padding: 10px 0 0 20px;
+	font-size: 18px;
+	color: black;
+}
+
+#sidebar a:link {
+	text-decoration: none;
+}
+
+#sidebar a:hover {
+	text-decoration: underline;
+}
+#sidebar a:visited {
+		text-decoration: none;
+}
+
+#sidebar li a {
+	padding-left: 10px;
+}
+
+#footer
+{
+
+	height: 47px;
+	width: 780px;
+	margin: 0 auto;
+	font-size: 10px;
+	color: #ffffff;
+	padding-top: 20px;
+	text-align: center;
+	border-top: 4px solid var(--vermillion);
+}
+
+#footer a
+{
+color: #ffffff;
+font-size: 10px;
+text-decoration: none;
+}
+.padding
+{
+padding: 10px;
+color:#FF0000;
+font-weight: bold;
+}
+
+
+
+*::selection{
+    background: var(red);
+    color: white;
+}
+
+
+
+
+html{
+    font-size: 82.4%;
+    overflow: hidden;
+
+}
+
+
+body{
+    background: whitesmoke;
+}
+
+
+
+section{
+    min-height: 100vh;
+    padding: 0 5%;
+    padding-top: 7.5rem;
+    padding-bottom: 2rem;
+
+}
+
+
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 3rem;
+    border-radius: 4rem;
+    font-size: 1.8rem;
+    background: 1.8rem;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+    transition: all .3s linear;
+
+}
+
+.btn:hover{
+    transform: scale(1.1);
+
+}
+
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background-color: white;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+
+}
+
+
+
+
+
+header .logo{
+    font-size: 4rem;
+    color: var(blue);
+}
+
+header .logo span{
+    color: var(yellow);
+}
+
+header .navbar a{
+    font-size: 1.8rem;
+    margin-left: 2rem;
+    color: var(black);
+
+}
+
+header .navbar a:hover{
+    color: var(red);
+
+}
+
+header input{
+    display: none;
+
+}
+
+header label{
+    font-size: 3rem;
+    color: var(black);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+.inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0rem); 
+    }
+    50%{
+        transform: translateY(-3.5rem);
+    }
+}
+
+.inicio .content h3{
+    font-size: 4rem;
+    color: black;
+    text-transform: uppercase;
+
+}
+
+
+.inicio .content h3 span{ 
+    color: var(--vermillion);
+    text-transform: uppercase;
+
+}
+
+.inicio .content p{
+    font-size: 4rem;
+    padding: 1rem 0;
+
+}
+
+.inicio .image img{
+    width: 40vw;
+}
+
+@media(max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media(max-width:768px){
+    header label{
+        visibility: visible;
+        opacity: 1;
+
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 1rem 2rem;
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+
+
+    }
+    header .navbar a{
+        display: block;
+        margin: 2rem 0;
+        font-size: 2rem;
+
+    }
+    header input:checked ~  .navbar{
+        transform: scaleY(1);
+        opacity: 1;
+
+    }
+    header input:checked ~ label::before{
+        content: '\f00d';
+    }
+
+
+
+
+
+
+    .inicio{
+        flex-flow: column-reverse;
+
+    }
+
+    .inicio .content h3{
+        font-size: 5rem;
+    }
+
+    .inicio .content p{
+        font-size: 5rem;
+
+    }
+
+}
+
+
+
+
+@media(max-width:450px){
+    html{
+        font-size: 49%;
+    }
+}
